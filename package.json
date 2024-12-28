@@ -1,0 +1,21 @@
+{
+  "name": "cryptocli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "coindex": "../bin/coindex"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brijesh Poojary",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "colors": "^1.4.0",
+    "commander": "^12.1.0",
+    "configstore": "^7.0.0",
+    "inquirer": "^8.2.6"
+  }
+}
