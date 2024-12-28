@@ -95,10 +95,7 @@ Prices in USD ($):
 - USD ($)
 - JPY (¥)
 - EUR (€)
-- INR (₹)
 - NGN (₦)
-- IDR (Rp)
-- ARS (AR$)
 
 ## 📄 License
 

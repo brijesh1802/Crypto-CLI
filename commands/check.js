@@ -8,10 +8,10 @@ const check = {
                 return;
             }
 
-            const priceOutput = await cryptoAPI.getPriceData(cmd.coin);
-            if (priceOutput) {
-                console.log(priceOutput);
-            } else {
+            const { currency } = await cryptoAPI.promptCurrency();
+
+            const priceOutput = await cryptoAPI.getPriceData(cmd.coin, currency);
+            if (!priceOutput) {
                 console.log('No price data found for the given symbol.'.yellow);
             }
         } catch (error) {
@@ -22,7 +22,8 @@ const check = {
     async priceall() {
         try {
             console.log('Fetching all cryptocurrency prices...'.cyan);
-            await cryptoAPI.getAllPrices(); // Logs data internally
+            const { currency } = await cryptoAPI.promptCurrency();
+            await cryptoAPI.getAllPrices(currency);
         } catch (error) {
             console.error('Error fetching all prices:'.red, error.message.red);
         }
@@ -31,7 +32,8 @@ const check = {
     async price20() {
         try {
             console.log('Fetching top 20 cryptocurrencies by price...'.cyan);
-            await cryptoAPI.getTop20Prices(); // Logs data internally
+            const { currency } = await cryptoAPI.promptCurrency();
+            await cryptoAPI.getTop20Prices(currency);
         } catch (error) {
             console.error('Error fetching top 20 prices:'.red, error.message.red);
         }
@@ -40,7 +42,8 @@ const check = {
     async price5() {
         try {
             console.log('Fetching top 5 cryptocurrencies by price...'.cyan);
-            await cryptoAPI.getTop5Prices(); // Logs data internally
+            const { currency } = await cryptoAPI.promptCurrency();
+            await cryptoAPI.getTop5Prices(currency);
         } catch (error) {
             console.error('Error fetching top 5 prices:'.red, error.message.red);
         }
