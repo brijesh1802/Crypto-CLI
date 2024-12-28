@@ -46,10 +46,10 @@ After installation, you can use the following commands:
 Check the price of a specific coin.
 
 ```bash
-coindex check price --coin BTC,ETH,XRP
+coindex check price --coin BTC
 ```
 
-Replace `BTC,ETH,XRP` with the coins you want to check.
+Replace `BTC` with the coins you want to check.
 
 ### 💰 Check Price-All
 
@@ -85,11 +85,9 @@ coindex check price5
 ## 📝 Example
 
 ```bash
-$ coindex check price --coin BTC,ETH,SHIB
+$ coindex check price --coin BTC
 Prices in USD ($):
 #1 Symbol: BTCUSDT | Price: $  44970.000
-#2 Symbol: ETHUSDT | Price: $  3754.410
-#3 Symbol: SHIBUSDT | Price: $  0.00005
 ```
 
 ## 🌍 Currency Options
